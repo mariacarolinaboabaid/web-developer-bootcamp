@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS DEMO</title>
+</head>
+
+<body>
+    <h1>FORMS</h1>
+    <hr>
+    <!-- INPUT TYPES -->
+    <h2>Types of Input</h2>
+    <form action="#">
+        <ol>
+            <li>Text: <input type="text" placeholder="Username"  name="username"></li>
+            <li>Password: <input type="password" placeholder="Password" name="password"></li>
+            <li>Color: <input type="color" name="color"></li>
+            <li>Number: <input type="number" placeholder="Phone Number" name="phone_number"></li>
+            <li>Radio: <input type="radio" name="checkbox"></li>
+        </ol>
+        <!-- BUTTONS -->
+        <p><button>Submit</button></p>
+    </form>
+    <hr>
+    <!-- LABELS -->
+    <h2>Using Labels</h2>
+    <form action="#">
+        <p>
+            <label for="username">Enter a Username:</label>
+            <input id="username" type="text" name="username">
+        </p>
+        <p>
+            <label for="password">Enter a password:</label>
+            <input id="password" type="text" name="password">
+        </p>
+        <p>
+            <label for="color">Enter a color: </label>
+            <input id="color" type="color" name="color">
+        </p>
+        <p>
+            <label for="phone_number">Enter your phone number: </label>
+            <input id="phone_number" type="number" name=
+            "phone_number">
+        </p>
+        <p>
+            <label for="radio">Check if you like pie: </label>
+            <input id="radio" type="radio" name="checkbox">
+        </p>
+        <!-- BUTTONS -->
+        <p><button type="button">This is a button, but it does not submit the form, because of the attribute 'type=button', that orders for the button just be a button.</button></p>
+        <p><button>This is another button, but it does submit the form, because I did not add the attribute 'type=button'.</button></p>
+    </form>
+</body>
+
+</html>

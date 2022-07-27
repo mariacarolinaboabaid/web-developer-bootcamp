@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations</title>
+</head>
+<body>
+    <header>
+        <h1>Form Validations with <i>Server Side Validation</i></h1>
+    </header>
+    <main>
+        <!-- USING THE ATTRIBUTE REQUIRED -->
+        <form action="/validation">
+            <p>
+                <label for="first_name">Enter your first name: </label>
+                <input type="text" name="first_name" id="first_name" required>
+            </p>
+            <!-- USING THE ATTRIBUTE MAXLENGTH -->
+            <p>
+                <label for="username">Enter your username: </label>
+                <input type="text" name="username" id="username" required maxlength="10">
+            </p>
+            <button>Submit</button>
+        </form>
+    </main>
+</body>
+</html>

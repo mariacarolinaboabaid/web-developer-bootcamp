@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2 {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        li {
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        li#hover {
+            border: 3px solid #B81365;
+        }
+
+        li#hover:hover {
+            background-color: #B81365;
+            color: white;
+        }
+
+        li#active {
+            border: 3px solid #026C7C;
+        }
+
+        li#active:active {
+            background-color: #026C7C;
+            color: white;
+        }
+
+        li#checked {
+            border: 3px solid black;
+        }
+        #check:checked {
+            box-shadow: 0px 0px 10px black;
+        }
+        li#nth{
+            border: 3px solid #6874E8;
+        }
+        ul li:nth-of-type(2n){
+            background-color: #6875e8a2;
+            color: red;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Working With Pseudo Classes</h1>
+    </header>
+    <main>
+        <ol type="a">
+            <!-- HOVER -->
+            <li id="hover">
+                <h2>:HOVER</h2>
+                <p>Please, pass the mouse over me!</p>
+            </li>
+            <!-- ACTIVE -->
+            <li id="active">
+                <h2>:ACTIVE</h2>
+                <p>Please, click me!</p>
+            </li>
+            <!-- CHECKED -->
+            <li id="checked">
+                <h2>:CHECKED</h2>
+                <p>
+                    <input type="checkbox" name="check" id="check">
+                    <label for="check">Please, check me!</label>
+                </p>
+            </li>
+            <!-- NTH-OF-TYPE() -->
+            <li id="nth">
+                <h2>:NTH-OF-TYPE ( )</h2>
+                <p id="principal"> - Changing the background-color of the 2nth positions:</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+            </li>
+        </ol>
+
+    </main>
+</body>
+
+</html>

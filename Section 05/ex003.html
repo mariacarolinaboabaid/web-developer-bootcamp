@@ -1,132 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORMS DEMO</title>
+    <title>Form Validations</title>
 </head>
-
 <body>
-    <h1>FORMS</h1>
-    <hr>
-    <!-- INPUT TYPES -->
-    <h2>Types of Input</h2>
-    <form action="#">
-        <ol>
-            <li>Text: <input type="text" placeholder="Username"  name="username"></li>
-            <li>Password: <input type="password" placeholder="Password" name="password"></li>
-            <li>Color: <input type="color" name="color"></li>
-            <li>Number: <input type="number" placeholder="Phone Number" name="phone_number" min="0" max="10"></li>
-            <li>Radio: <input type="radio" name="radio"></li>
-            <li>Checkbox: <input type="checkbox" name="checkbox"></li>
-        </ol>
-        <!-- BUTTONS -->
-        <p><button>Submit</button></p>
-    </form>
-    <hr>
-    <!-- LABELS -->
-    <h2>Using Labels</h2>
-    <form action="#">
-        <p>
-            <label for="username">Enter a Username:</label>
-            <input id="username" type="text" name="username">
-        </p>
-        <p>
-            <label for="password">Enter a password:</label>
-            <input id="password" type="text" name="password">
-        </p>
-        <p>
-            <label for="color">Enter a color: </label>
-            <input id="color" type="color" name="color">
-        </p>
-        <p>
-            <label for="phone_number">Enter your phone number: </label>
-            <input id="phone_number" type="number" name=
-            "phone_number">
-        </p>
-        <p>
-            <label for="radio">Check if you like pie: </label>
-            <input id="radio" type="radio" name="radio">
-        </p>
-        <p>
-            <label for="checkbox">Check if you like pie: </label>
-            <input id="checkbox" type="checkbox" name="checkbox" checked>
-        </p>
-        <!-- BUTTONS -->
-        <p><button type="button">This is a button, but it does not submit the form, because of the attribute 'type=button', that orders for the button just be a button.</button></p>
-        <p><button>This is another button, but it does submit the form, because I did not add the attribute 'type=button'.</button></p>
-    </form>
-    <hr>
-    <!-- SEARCHING ON OUTSIDE THROUGH A FORM USING THE ATTRIBUTE 'ACTION'-->
-    <h2>Searching on Reddit</h2>
-    <form action="https://www.reddit.com/search">
-        <label for="reddit">What do you wanna search? </label>
-        <input id="reddit" type="text" name="q">
-        <button>Search</button>
-    </form>
-    <hr>
-    <h2>Searching on Google</h2>
-    <form action="https://www.google.com.br/search">
-        <label for="google">What do you wanna search? </label>
-        <input id="google" type="text" name="q">
-        <button>Search</button>
-    </form>
-    <hr>
-    <h2>Searching on Youtube</h2>
-    <form action="https://www.youtube.com/results?search">
-        <label for="youtube">What do you wanna search? </label>
-        <input id="youtube" type="text" name="search_query">
-        <button>Search</button>
-    </form>
-    <hr>
-    <!-- MULTIPLES RADIO INPUTS -->
-    <h2>Playing with Multiple Radio Inputs</h2>
-    <form action="/tacos">
-        <!-- 1º RADIO -->
-        <label for="xs">XS:</label>
-        <input type="radio" name="shirt_size" id="xs" value="xs">
-        <!-- 2º RADIO -->
-        <label for="s">S:</label>
-        <input type="radio" name="shirt_size" id="s" value="s">
-        <!-- 3º RADIO -->
-        <label for="m">M:</label>
-        <input type="radio" name="shirt_size" id="m" value="m">
-        <!-- 4º RADIO -->
-        <label for="l">L:</label>
-        <input type="radio" name="shirt_size" id="l" value="l">
-        <!-- 5º RADIO -->
-        <label for="xl">XL:</label>
-        <input type="radio" name="shirt_size" id="xl" value="xl">
-        <button>Choose</button>
-    </form>
-    <hr>
-    <!--SELECT INPUT-->
-    <h2>Using the Select and Range Input</h2>
-    <form action="/tacos">
-        <label for="animals">Wich of this animals is your favorite?
-        </label>
-        <select name="animals" id="animals_select">
-            <option value="">--Please choose an animal--</option>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="fish">Fish</option>
-            <option value="cow">Cow</option>
-            <option value="spider">Spider</option>
-        </select>
-        <p>
-            <label for="cuteness">How cute you think he is?</label>
-            <input type="range" id="cuteness" name="cute" min="0" max="10" value="5">
-        </p>
-        <button>Choose</button>
-    </form>
-    <hr>
-    <!-- TEXT AREA -->
-    <h2>Testing Text Area</h2>
-    <label for="comment">What did you think about this page? Leave your comment below:</label>
-    <br>
-    <textarea name="comment" id="comment" cols="90" rows="10" placeholder="Comment here"></textarea>
-    <button>Comment</button>
+    <header>
+        <h1>Form Validations with <i>Server Side Validation</i></h1>
+    </header>
+    <main>
+        <!-- USING THE ATTRIBUTE REQUIRED -->
+        <form action="/validation">
+            <p>
+                <label for="first_name">Enter your first name: </label>
+                <input type="text" name="first_name" id="first_name" required>
+            </p>
+            <!-- USING THE ATTRIBUTE MAXLENGTH -->
+            <p>
+                <label for="username">Enter your username: </label>
+                <input type="text" name="username" id="username" required maxlength="10">
+            </p>
+            <button>Submit</button>
+        </form>
+    </main>
 </body>
 </html>

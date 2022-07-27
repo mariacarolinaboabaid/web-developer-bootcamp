@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+        h1, h2{
+            text-indent: 20px;
+        }
+        p{
+            margin: 20px;
+            line-height: 2em;
+        }
+        main p{
+            text-indent: 40px;
+        }
+        p#first::first-line{
+            font-weight: bold;
+            color: white;
+            background-color: black;
+        }
+        p#second::first-letter{
+            font-weight: bold;
+            color: rgb(220, 47, 76);
+            font-size: 30px;
+            margin-right: 3px;
+        }
+        p#third::selection{
+            background-color: #6C3A5C;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Working With Pseudo Elements</h1>
+        <p>Pseudo Elements are keywords that allow us to select a particular part of an selected element.</p>
+    </header>
+    <main>
+        <!-- FIRST-LINE -->
+        <h2>Using '<i>::First-Line</i>':</h2>
+        <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dignissimos. Rem ad animi maxime repellat sunt, ullam tempore ratione quis, maiores minima neque sequi, veniam esse magni consequatur natus. Magnam.
+        Aut, nam reprehenderit. Eligendi ex nemo eaque perferendis rem, aliquam odio exercitationem dolore, molestias amet similique incidunt, harum vitae adipisci odit reiciendis quod illo ut? Laudantium suscipit voluptates voluptatibus necessitatibus?
+        Aut voluptatibus eligendi, quisquam aspernatur numquam voluptatum nostrum odio nulla ab rem! Sint tenetur, ducimus quasi doloribus, odio voluptate dolores quam iusto ad ipsam, eligendi dolorum corrupti esse distinctio ratione.
+        Laborum nisi, odit totam aliquam deserunt explicabo fuga reprehenderit minus aut unde necessitatibus, obcaecati iure accusantium! Explicabo quisquam sint quam sunt, repudiandae ut a esse ab maxime quo fuga molestiae.
+        Reprehenderit vero facere in, facilis voluptatibus odit, accusantium ducimus temporibus, accusamus placeat quisquam illo inventore quia. Excepturi placeat dolore doloribus! Nesciunt, corporis? Dolorum, laudantium architecto reiciendis obcaecati ea repudiandae! Tempore.</p>
+        <!-- FIRST-LETTER -->
+        <h2>Using '<i>::First-Letter</i>':</h2>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dignissimos. Rem ad animi maxime repellat sunt, ullam tempore ratione quis, maiores minima neque sequi, veniam esse magni consequatur natus. Magnam.
+        Aut, nam reprehenderit. Eligendi ex nemo eaque perferendis rem, aliquam odio exercitationem dolore, molestias amet similique incidunt, harum vitae adipisci odit reiciendis quod illo ut? Laudantium suscipit voluptates voluptatibus necessitatibus?
+        Aut voluptatibus eligendi, quisquam aspernatur numquam voluptatum nostrum odio nulla ab rem! Sint tenetur, ducimus quasi doloribus, odio voluptate dolores quam iusto ad ipsam, eligendi dolorum corrupti esse distinctio ratione.
+        Laborum nisi, odit totam aliquam deserunt explicabo fuga reprehenderit minus aut unde necessitatibus, obcaecati iure accusantium! Explicabo quisquam sint quam sunt, repudiandae ut a esse ab maxime quo fuga molestiae.
+        Reprehenderit vero facere in, facilis voluptatibus odit, accusantium ducimus temporibus, accusamus placeat quisquam illo inventore quia. Excepturi placeat dolore doloribus! Nesciunt, corporis? Dolorum, laudantium architecto reiciendis obcaecati ea repudiandae! Tempore.</p>
+        <!-- SELECTION -->
+        <h2>Using '<i>::Selection</i>':</h2>
+        <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, dignissimos. Rem ad animi maxime repellat sunt, ullam tempore ratione quis, maiores minima neque sequi, veniam esse magni consequatur natus. Magnam.
+        Aut, nam reprehenderit. Eligendi ex nemo eaque perferendis rem, aliquam odio exercitationem dolore, molestias amet similique incidunt, harum vitae adipisci odit reiciendis quod illo ut? Laudantium suscipit voluptates voluptatibus necessitatibus?
+        Aut voluptatibus eligendi, quisquam aspernatur numquam voluptatum nostrum odio nulla ab rem! Sint tenetur, ducimus quasi doloribus, odio voluptate dolores quam iusto ad ipsam, eligendi dolorum corrupti esse distinctio ratione.
+        Laborum nisi, odit totam aliquam deserunt explicabo fuga reprehenderit minus aut unde necessitatibus, obcaecati iure accusantium! Explicabo quisquam sint quam sunt, repudiandae ut a esse ab maxime quo fuga molestiae.
+        Reprehenderit vero facere in, facilis voluptatibus odit, accusantium ducimus temporibus, accusamus placeat quisquam illo inventore quia. Excepturi placeat dolore doloribus! Nesciunt, corporis? Dolorum, laudantium architecto reiciendis obcaecati ea repudiandae! Tempore.</p>
+    </main>
+</body>
+</html>

@@ -1,29 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validations</title>
+    <title>Race Registration Form</title>
 </head>
+
 <body>
     <header>
-        <h1>Form Validations with <i>Server Side Validation</i></h1>
+        <h1>Race Registration!</h1>
     </header>
     <main>
-        <!-- USING THE ATTRIBUTE REQUIRED -->
-        <form action="/validation">
-            <p>
-                <label for="first_name">Enter your first name: </label>
+        <form action="#">
+            <!-- REQUIRING THE NAME -->
+            <div>
+                <label for="first_name">First Name</label>
                 <input type="text" name="first_name" id="first_name" required>
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" required>
+            </div>
+            <!-- REQUIRING THE TYPE OF RACE -->
+            <p>Select a Race:
+                <br>
+                <!-- 5K -->
+                <input type="radio" name="typerace" id="five" value="five">
+                <label for="five">Fun Run 5k</label>
+                <br>
+                <!-- HALF MARATHON -->
+                <input type="radio" name="typerace" id="half" value="half">
+                <label for="half">Half Marathon</label>
+                <br>
+                <!-- FULL MARATHON -->
+                <input type="radio" name="typerace" id="full" value="full">
+                <label for="full">Full Marathon</label>
             </p>
-            <!-- USING THE ATTRIBUTE MAXLENGTH -->
-            <p>
-                <label for="username">Enter your username: </label>
-                <input type="text" name="username" id="username" required maxlength="10">
-            </p>
-            <button>Submit</button>
+            <!-- REQUIRING E-MAIL AND PASSWORD -->
+            <div>
+                <!-- E-MAIL -->
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required>
+                <!-- PASSWORD -->
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <br>
+            <!-- REQUIRING THE AGE -->
+            <div>
+                <label for="age">Select Age Group:</label>
+                <select name="age" id="age">
+                    <option value="under_18" selected>Under 18</option>
+                    <option value="18_30">18-30</option>
+                    <option value="30_50">30-50</option>
+                    <option value="50_plus">50+</op+tion>
+                </select>
+            </div>
+            <br>
+            <!-- BUTTON -->
+            <button>Register!</button>
         </form>
     </main>
 </body>
+
 </html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-decoration: underline;
+            margin-bottom: 40px;
+        }
+        h2.example, h2#example2{
+            background-color: #655A7C;
+            color: white;
+            border: 1px solid black;
+            font-size: 16px;
+            padding: 10px;
+        }
+        span{
+            background-color: #98CE00;
+            border: 1px solid black;
+            font-size: 16px;
+            padding: 10px;
+        }
+        h2#example2{
+            display: inline;
+        }
+        span.example3{
+            display: block;
+            margin-bottom: 40px;
+            width: 450px;
+        }
+        div{
+            border: 2px black dashed;
+            background-color: rgba(211, 211, 211, 0.489);
+            max-width: 950px;
+            padding: 3px 20px;
+            text-align: justify;
+            line-height: 1.5em;
+        }
+        span.example4{
+            display: inline-block;
+            padding: 10px;
+            margin: 20px;
+            width: 80px;
+            height: 22px;
+            text-align: center;
+            
+        }
+        p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Playing With Display Property</h1>
+    </header>
+    <main>
+        <!-- BLOCK -->
+        <h2>Display Block</h2>
+        <h2 class="example">I am a h2 and I have a '<i>display: block</i>' property</h2>
+        <h2 class="example" style="margin-bottom: 70px"; >I am also a h2 with the same display property</h2>
+        <!-- INLINE -->
+        <h2>Display Inline</h2>
+        <span>I am a span and I have a '<i>display: inline</i>' property</span>
+        <span>I am also a span with the same display property</span>
+        <!-- TRANSFORMING BLOCK WITH DISPLAY INLINE -->
+        <h2 style="margin-top: 70px";>Transforming Display Block In To Display Inline</h2>
+        <h2 id="example2">But, with the property '<i>display: inline</i>' we can chance our behavior</h2>
+        <span>span</span>
+        <span>span</span>
+        <!-- TRANSFORMING INLINE WITH DISPLAY BLOCK -->
+        <h2 style="margin-top: 70px";>Transforming Display Block In To Display Inline</h2>
+        <span class="example3">And I can have a block property if we add the '<i>display: block</i>'</span>
+        <span class="example3">span</span>
+        <!-- OBSERVATION -->
+        <div>
+            <p>The <b><i>inline property</i></b> ignore the settings of <i>height and width</i>. And also, the settings of <i>margin and padding</i> only work horizontally.</p>
+            <p>On the contrary, the <b><i>inline property</i></b> respects all of this settings.</p>
+            <p>An between, there is the choice of <b><i>inline-block property</i></b>, that works like an inline display, but respect the settings.</p>
+        </div>
+        <!-- INLINE-BLOCK -->
+        <h2 style="margin-top: 70px";>Display Inline-Block</h2>
+        <p>Below, we can see a <i>span element</i> with height, width, margin and padding all working:</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet soluta itaque numquam ducimus mollitia repellendus, esse fuga harum dicta quis perspiciatis dignissimos rerum nemo vitae nobis <span class="example4"> SPAN </span> officiis! Rerum, laudantium suscipit.
+        Assumenda minima, velit aliquam eum iste tempora temporibus mollitia corrupti amet optio praesentium, quis unde, accusantium exercitationem natus! Quia laborum velit, officiis pariatur soluta nulla minima harum ullam ad delectus?
+        Fugit <span class="example4"> SPAN </span>amet enim temporibus quis aliquid beatae, exercitationem labore alias modi dolor? Fugit sequi officia modi harum amet soluta totam dolorem officiis, culpa ab magni aperiam, minus error, ducimus similique.</p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Property</title>
+    <style>
+        body{
+            font-family: arial;
+            text-align: center;
+            background-color: lightgrey;
+        }
+        h1{
+            margin-bottom: 160px;
+        }
+        section#section_two{
+            border: 1px solid black;
+            transform: translate(100px)  rotate(10deg) scale(0.5);
+        }
+        h2{
+            font-weight: normal;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 900;
+            letter-spacing: 1px;
+            line-height: 2em;
+            border: 2px solid black;
+            width: 180px;
+            height: 35px;
+            margin: 40px auto;
+        }
+        h2.first{
+            background-color: #93B5C6;
+            
+        }
+        h2.second{
+            background-color: #DDEDAA;
+        }
+        h2.third{
+            background-color: #D7816A;
+        }
+        h2.fourth{
+            background-color: #BD4F6C;
+        }
+        section#section_one h2.first{
+            transform: rotate(45deg);
+            transform-origin: top right;
+        }
+        section#section_one h2.second{
+            transform: scale(2);
+        }
+        section#section_one h2.third{
+            transform: translatex(300px);
+        }
+        section#section_one h2.fourth{
+            transform: translatey(-40px);
+        }
+        section#section_two h2.first{
+            transform: skew(10deg, 10deg);
+        }
+        section#section_two h2.third{
+            transform: skew(10deg, 10deg) translateX(-200px) scale(1.5) rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TRANSFORM PROPERTY</h1>
+    </header>
+    <main>
+        <!-- 1º SECTION -->
+        <section id="section_one">
+            <h2 class="first">Transform me!</h2>
+            <h2 class="second">Transform me!</h2>
+            <h2 class="third">Transform me!</h2>
+            <h2 class="fourth">Transform me!</h2>
+        </section>
+        <!-- 2º SECTION -->
+        <section id="section_two">
+            <h2 class="first">Transform me!</h2>
+            <h2 class="second">Transform me!</h2>
+            <h2 class="third">Transform me!</h2>
+            <h2 class="fourth">Transform me!</h2>
+        </section>
+    </main>
+</body>
+</html>

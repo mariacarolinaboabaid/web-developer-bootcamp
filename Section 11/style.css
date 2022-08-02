@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/* FONTS IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* STYLE */
+html{
+    box-sizing: border-box;
+    font-family: 'Opens Sans', sans-serif;
+}
+body{
+    background-color: #60a9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+div#main_panel{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px 25px;
+    width: 100vw;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+div.pricing_table{
+    border-bottom: 1px solid #e1f1ff;
+}
+div.pricing_table:last-child{
+    border-bottom: none;
+}
+img.img_price{
+    margin-bottom: 25px;
+    max-width: 100%;
+}
+h2.princing_header{
+    color: #888;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+ul.pricing_features{
+    /* top sides bottom */
+    margin: 50px 0px 25px;
+    color: #016ff9;
+    padding: 0px;
+}
+li.itens_pricing_features{
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0;
+    border-top: 1px solid #e1f1ff;
+}
+li.itens_pricing_features:last-child{
+    border-bottom: 1px solid #e1f1ff;
+}
+span.price{
+    display: block;
+    color: #016ff9;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+a.button, a#button_differ{
+    border: 1px solid #9dd1ff;
+    border-radius: 10px;
+    color: #348efe;
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 35px;
+    /* top and bottom + sides */ 
+    margin: 25px 0;
+    transition: 0.5s;
+}
+a#button_differ{
+    background-color: #016ff9;
+    color: white;
+}
+a.button:hover{
+    background-color: #016ff9;
+    color: white;
+}
+a#button_differ:hover{
+    background-color: white;
+    color: #348efe;
+}
+/* MEDIA QUERY */
+@media (min-width: 850px){
+    div#main_panel{
+        flex-direction: row;
+    }
+    div.pricing_table{
+        border-bottom: none;
+        border-right: 1px solid #e1f1ff;
+        padding: 25px 50px;
+    }
+    div.pricing_table:last-child{
+        border-right: none;
+    }
+}
+@media(min-width: 1262px){
+    span#span_differ{
+        margin-top: -5px;
+    }
+}

@@ -1,6 +1,6 @@
 /* GENERAL */ 
 body{
-    background-color: lightsteelblue;
+    background-color: rgba(176, 196, 222, 0.758);
     font-family: Arial, Helvetica, sans-serif;
 }
 h1{
@@ -9,7 +9,8 @@ h1{
 }
 h2{
     font-size: 1.1rem;
-    background-color: beige;
+    background-color: rgba(0, 0, 0, 0.704);
+    color: white;
     padding: 10px;
     margin-top: 25px;
 }

@@ -1,24 +1,35 @@
 /* FONT IMPORT */
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Uchen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto+Slab:wght@200;400&family=Uchen&display=swap');
 
 body{
-    background-color: #99a1a691;
+    background-color: #99a1a60b;
+    font-family: 'Roboto Slab', serif;
 }
-h1, h2{
-    font-family: 'Uchen', serif;
-    font-size: 40px;
-    margin: 20px;
+h1{
+    font-size: 1.5rem;
+    margin-left: 1%;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.504);
+    width: 26%;
+    padding-bottom: 1rem;
 }
 h2{
-    font-size: 25px;
-    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    margin-left: 2%;
+    font-weight: 300;
+}
+h2.class_h2{
+    margin-top: 30px;
 }
 img{
     display: inline-block;
-    margin: 20px;
-    width: 25vw;
-    height: 30vh;
-    border: 2px solid black;
-
+    margin-left: calc(40%/6);
+    height: 60vh;
+    width: 20%;
+    
+    box-shadow: 6px 0px 13px rgba(0, 0, 0, 0.386);
+}
+img:hover{
+    transform: scale(105%) translate(10px, -10px);
+    box-shadow: 9px 0px 20px rgb(44, 45, 37);
 }

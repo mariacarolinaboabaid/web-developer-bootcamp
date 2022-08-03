@@ -1,0 +1,30 @@
+/* GENERAL AND TITLE */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h1{
+    text-decoration: underline;
+}
+h1, h2{
+    margin: 40px;
+}
+/* COLUMNS COLORS*/
+div#col1{
+    background-color: #06D6A0;
+}
+div#col2{
+    background-color: #9DACFF;
+}
+div#col3{
+    background-color: #EF476F;
+}
+div#col4{
+    background-color: #76E5FC;
+}
+div#col5{
+    background-color: #f75c03;
+}
+div#col6{
+    background-color: #9BC53D;
+}

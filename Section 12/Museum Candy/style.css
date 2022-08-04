@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* GOOGLE FONTS IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600&display=swap');
+/* GENERAL */
+body {
+    background-color: #f5d9df;
+    font-family: 'Nunito', sans-serif;
+}
+section {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/* NAVBAR */
+span.navbar-brand {
+    padding-left: 15px;
+    color: #ea1c2c;
+}
+#main_navbar,
+#main_navbar span.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+#main_navbar a.nav-link {
+    color: white;
+}
+#main_navbar a.nav-link:hover {
+    color: #ea1c2c;
+}
+/* BUTTON TOGGLER */
+button.navbar-toggler {
+    border: 3px solid white;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+button.navbar-toggler:hover {
+    border: 3px solid blue;
+}
+/* 1 SECTION */
+h1 {
+    color: #ea1c2c;
+    font-size: 2.5rem;
+    line-height: 3.2rem;
+    letter-spacing: 3px;
+    text-shadow: 12px 12px 1px white;
+}
+/* 2 SECTION */
+div#first_text h2,
+div#second_text h2,
+div#third_text h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: #ea1c2c;
+}
+
+div#first_text p,
+div#second_text p,
+div#third_text p{
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: #f498b8;
+}
+/* MEDIA QUERY */
+/* MAX OF 1200 PX */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 1.5rem;
+        text-shadow: 10px 10px 1px white;
+        line-height: 2.5rem;
+    }
+    div#first_text h2, div#second_text h2, div#third_text h2 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    div#first_text p, div#second_text p, div#third_text p {
+        font-size: 1rem;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        line-height: 2rem;
+    }
+    div#first_text img,  div#second_text img, div#third_text img {
+        display: none;
+    }
+}
+/* MAX OF 766 PX */
+@media (max-width: 766px) {
+    div#first_text, div#second_text, div#third_text {
+        margin: 40px 0px 40px 0px;
+    }
+} 

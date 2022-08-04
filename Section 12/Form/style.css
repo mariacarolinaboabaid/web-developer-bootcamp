@@ -1,0 +1,13 @@
+body{
+    background-color: #ffe5ec;
+}
+h1{
+    color: white;
+    text-align: center;
+    background-color: #fb6f92;
+    border-radius: 30px;
+}
+form{
+    color: #ec0868;
+    font-weight: 500;
+}

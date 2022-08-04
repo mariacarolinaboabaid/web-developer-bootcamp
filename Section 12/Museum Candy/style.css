@@ -26,11 +26,13 @@ span.navbar-brand {
 #main_navbar a.nav-link:hover {
     color: #ea1c2c;
 }
+#main_navbar{
+    background-color: rgb(222, 192, 222);
+}
 /* BUTTON TOGGLER */
 button.navbar-toggler {
-    border: 3px solid white;
+    border: 3px solid rgba(255, 255, 255, 0.628);
     margin-right: 15px;
-    margin-top: 10px;
 }
 button.navbar-toggler:hover {
     border: 3px solid blue;

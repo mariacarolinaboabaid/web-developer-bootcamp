@@ -1,10 +1,4 @@
-const toDo = ["oi", "tchau"];
-let removeToDo = "oi";
-let item = toDo.indexOf(removeToDo);
-console.log(item)
-if (item === -1){
-    console.log("oi");
+const greet = (name) => {
+    return console.log(`Hey ${name}`);
 }
-else{
-    console.log("tchau")
-}
+greet('maria')

@@ -1,18 +1,11 @@
-const movies = [
-    { title: "Harry Potter", score: 10 },
-    { title: "Nothing Hill", score: 9 },
-    { title: "Percy Jackson", score: 5 },
-    { title: "Bambi", score: 7 }
-]
+const movies = [{title: "Harry Potter", score: 10},
+{title: "Titanic", score: 9.5},
+{title: "Procurando Nemo", score: 8},
+{title: "50 Tons de Cinza", score: 4}]
 
-const goodMovies = movies.filter((movie) => (
-    movie.score > 8));
+const goodMovies = movies.filter(function (movie){
+    return movie.score > 8;
+}).map(function (m){
+    m.title})
 
 console.log(goodMovies)
-
-const greatMovies = function bestMovies(movie) {
-    return movie.filter(function filteringMovies(m) {
-       return m.score > 8;
-    })
-}
-console.log(greatMovies(movies))

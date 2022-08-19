@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Form Prevent Default</title>
+    <!-- CSS -->
+    <style>
+        body {
+            background-color: #fdcff3b8;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            color: #190E4F;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            border-bottom: 3px solid #190E4F;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+        h2{
+            text-transform: uppercase;
+            font-size: 19px;
+            margin-top: 35px;
+        }
+
+        li{
+            text-transform: uppercase;
+            margin: 10px;
+        }
+
+        input {
+            width: 300px;
+            height: 25px;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Using Prevent Default Event With Form</h1>
+    <h2>Form to compose student groups </h2>
+    <!-- FORM -->
+    <form action="/abc">
+        <!-- Name -->
+        <label for="name">Student</label>
+        <input type="text" name="name" id="name" placeholder="Enter here your name">
+        <!-- Button -->
+        <button>Enter</button>
+    </form>
+    <h2>Group Participants</h2>
+    <ul id="group"></ul>
+    <!-- JAVASCRIPT-->
+    <script src="app.js"></script>
+</body>
+
+</html>

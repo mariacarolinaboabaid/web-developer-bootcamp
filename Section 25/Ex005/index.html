@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegation Event</title>
+    <!-- CSS -->
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #B9F5D8;
+        }
+        h1{
+            text-transform: uppercase;
+        }
+        p, input, div{
+            margin-left: 20px;
+        }
+        div{
+            margin-top: 10px;
+            min-height: 100px;
+            border-radius: 10px;
+            width: 30vw;
+            background-color: white;
+            box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.592);
+            padding: 5px;
+        }
+        li{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping List</h2>
+    <input type="text" id="item" placeholder="Add item to buy">
+    <button>Submit</button>
+
+    <p><b>Items to buy:</b></p>
+    <div>
+        <ul id="list">
+            <li>Apple</li>
+            <li>Orange Juice</li>
+            <p>You can not remove me, because I am a paragraph!</p>
+        </ul>
+    </div>
+
+    <p><i>If you desire to remove an item, just click on the item.</i></p>
+
+    <!-- JAVASCRIPT -->
+    <script src="app.js"></script>
+</body>
+</html>

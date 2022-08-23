@@ -1,0 +1,73 @@
+/* FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Silkscreen&display=swap');
+
+/* GENERAL */
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+div#firstContainer,
+div#secondContainer {
+    width: 530px;
+    border: 2px solid rgba(128, 128, 128, 0.32);
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.32);
+    box-sizing: border-box;
+}
+
+/* FIRST DIV AND CHILD ELEMENTS */
+div#firstContainer {
+    margin: 40px auto 0px auto;
+    height: 405px;
+}
+
+img {
+    width: 100%;
+    height: 350px;
+}
+
+div#firstContainer p {
+    font-family: 'Bebas Neue', cursive;
+    margin: 13px 15px;
+    font-size: 20px;
+}
+
+/* SECOND DIV AND CHILD ELEMENTS */
+div#secondContainer {
+    margin: 0px auto 0px auto;
+    padding: 30px 25px;
+    height: 270px;
+    border-top: none;
+}
+
+p#scoreCounter {
+    font-weight: 600;
+    font-size: 35px;
+}
+
+/* NUM OF PLAYERS SELECTION */
+label {
+    font-weight: 600;
+    font-size: 18px;
+    margin: 8px 0px;
+}
+
+select {
+    border-radius: 10px;
+    text-align: center;
+    width: 50px;
+}
+
+/* BUTTONS */
+section#buttons {
+    margin: 20px 0px;
+}
+
+button#btnP1,
+button#btnP2 {
+    width: 170px;
+}
+
+button#btnReset {
+    width: 127px;
+}

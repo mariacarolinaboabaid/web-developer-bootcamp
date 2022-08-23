@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Score Keeper</title>
+    <!-- CSS BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="firstContainer">
+        <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80"
+            alt="Photo of a Ping Pong table">
+        <header>
+            <p>Ping Pong Score Keeper</p>
+        </header>
+
+    </div>
+    <div id="secondContainer">
+        <!-- SCORE KEEPER -->
+        <p id="scoreCounter"><span id="displayP1">0</span> x <span id="displayP2">0</span></p>
+        <p id="winner"><i>Use the buttons below to keep score</i></p>
+        <!-- NUM OF PLAYERS -->
+        <label for="players">Playing To</label>
+        <select name="players" id="playTo">
+            <option value="?">?</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <section id="buttons">
+            <button id="btnP1" type="button" class="btn btn-success">+1 Player One</button>
+            <button id="btnP2" type="button" class="btn btn-primary">+1 Player Two</button>
+            <button id="btnReset" type="button" class="btn btn-danger">Reset</button>
+        </section>
+
+    </div>
+    <!-- JAVACRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <!-- JAVASCRIPT -->
+    <script src="app.js"></script>
+</body>
+
+</html>

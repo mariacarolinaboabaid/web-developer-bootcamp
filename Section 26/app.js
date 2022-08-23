@@ -11,9 +11,23 @@ const whoWin = document.getElementById("winner")
 let p1Score = 0
 let p2Score = 0
 let isGameOver = false
+// FUNCTIONS DISABLE AND UNDISABLE
+function disable() {
+    p1Button.disabled = true
+    p2Button.disabled = true
+}
+function disableAll() {
+    p1Button.disabled = true
+    p2Button.disabled = true
+    resetButton.disabled = true
+}
+function undisable() {
+    p1Button.disabled = false
+    p2Button.disabled = false
+    resetButton.disabled = false
+}
 // FUNCTION RESET 
 function reset() {
-    undisable()
     p1Score = 0
     p2Score = 0
     countScoreP1.innerText = p1Score
@@ -21,20 +35,15 @@ function reset() {
     countScoreP1.style.color = "black"
     countScoreP2.style.color = "black"
     whoWin.innerHTML = "<i>Use the buttons below to keep score</i>"
-    whoWin.style.color= "black"
+    whoWin.style.color = "black"
     isGameOver = false
 }
-function disable (){
-    p1Button.disabled = true
-    p2Button.disabled = true
-}
-function undisable(){
-    p1Button.disabled = false
-    p2Button.disabled = false
-}
 // SELECT EVENT
+disableAll()
 winningScore.addEventListener("change", function () {
+    disable()
     winningScore = parseInt(winningScore.value)
+    undisable()
     reset()
 })
 // BUTTONS EVENTS

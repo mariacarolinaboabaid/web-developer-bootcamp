@@ -27,7 +27,7 @@ function undisable() {
     resetButton.disabled = false
 }
 // FUNCTION RESET 
-function reset() {
+function reset(){
     p1Score = 0
     p2Score = 0
     countScoreP1.innerText = p1Score
@@ -43,9 +43,7 @@ disableAll()
 winningScore.addEventListener("change", function () {
     disable()
     winningScore = parseInt(winningScore.value)
-    reset()
     undisable()
-    console.log(winningScore)
 })
 // BUTTONS EVENTS
 p1Button.addEventListener("click", function () {
@@ -76,5 +74,5 @@ p2Button.addEventListener("click", function () {
         }
     }
 })
-resetButton.addEventListener("click", reset)
 
+resetButton.addEventListener("click", reset)

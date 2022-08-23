@@ -1,4 +1,4 @@
-const selection = document.getElementById("test")
+let selection = document.getElementById("test")
 const btn = document.querySelector("button")
 
 

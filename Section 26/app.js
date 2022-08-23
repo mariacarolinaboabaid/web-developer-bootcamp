@@ -43,8 +43,9 @@ disableAll()
 winningScore.addEventListener("change", function () {
     disable()
     winningScore = parseInt(winningScore.value)
-    undisable()
     reset()
+    undisable()
+    console.log(winningScore)
 })
 // BUTTONS EVENTS
 p1Button.addEventListener("click", function () {

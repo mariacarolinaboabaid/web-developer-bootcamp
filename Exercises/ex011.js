@@ -13,18 +13,16 @@ const people = [
     { firstName: 'Aaron', lastName: 'Garrett', DOB: '09/04/1985', department: 'Development', salary: '39000' }
 ]
 
-
 // AVERAGE OF INCOME
-// let averageIncome = (person, key) => {
-//     let sum = 0
-//     for (let individual of person) {
-//         sum = sum + parseInt(individual[key])
-//     }
-//     let media = sum / person.length
-//     console.log(media)
-// }
-// averageIncome(people, "salary")
-
+let averageIncome = (person, key) => {
+    let sum = 0
+    for (let individual of person) {
+        sum = sum + parseInt(individual[key])
+    }
+    let media = sum / person.length
+    console.log(media)
+}
+averageIncome(people, "salary")
 
 // PEOPLE OLDER THAN 30
 // Current Date
@@ -33,32 +31,44 @@ let yearNow = dateNow.getFullYear()
 let monthNow = dateNow.getMonth() + 1
 let dayNow = dateNow.getDate()
 
-let peopleAge = (person, name, dateBirth) => {
-    let year = ""
-    let month = ""
-    let day = ""
-    let over30 = []
+const over30Age = []
+let checkingAge = (person, name, dateOfBirth) => {
     for (let individual of person) {
-        year = parseInt(individual[dateBirth].slice(-4))
-        month = parseInt(individual[dateBirth].slice(0, 2))
-        day = parseInt(individual[dateBirth].slice(-7, -5))
-        if (Math.abs(year - yearNow) === 30) {
-            if (month - monthNow === 0 && day - dayNow <= 0) {
-                over30.push(individual[name])
-                console.log(over30)
-            }
-            else if(month - monthNow <0){
-                over30.push(name)
-                console.log(over30)
-            }
+        let year = parseInt(individual[dateOfBirth].slice(-4))
+        let month = parseInt(individual[dateOfBirth].slice(0, 2))
+        let day = parseInt(individual[dateOfBirth].slice(-7, -5))
+        if (Math.abs(year - yearNow) === 30 && month - monthNow === 0 && day - dayNow <= 0) {
+            over30Age[over30Age.length] = individual[name]
         }
-        else if (Math.abs(year - yearNow) > 30) {
-            over30.push(individual[name])
-            console.log(over30)
+        else if (Math.abs(year - yearNow) === 30 && month - monthNow < 0) {
+            over30Age[over30Age.length] = individual[name]
         }
-        return over30;
+        else if (Math.abs(year - yearNow) > 30){
+            over30Age[over30Age.length] = individual[name]
+        }
+    }
+    console.log(over30Age)
+}
+checkingAge(people, "firstName", "DOB")
+
+// PEOPLE FULL NAME 
+const fullNameArray = []
+let fullName = (person, firstName, lastName) => {
+    for (let individual of person) {
+        var allName = individual[firstName].concat(" ", individual[lastName])
+        fullNameArray[fullNameArray.length] = allName
+    }
+    console.log(fullNameArray)
+}
+fullName(people, "firstName", "lastName")
+
+// THE YOUNGEST TO THE OLDEST
+let rankingAge = (person, name, dateOfBirth) => {
+    for (let individual of person) {
+        let yearBirth = parseInt(individual[dateOfBirth].slice(-4))
+        let monthBirth = parseInt(individual[dateOfBirth].slice(0, 2))
+        let dayBirth = parseInt(individual[dateOfBirth].slice(-7, -5))
+        let yearAge = yearNow - yearBirth
+        console.log(yearAge)
     }
 }
-
-
-console.log(peopleAge(people, "firstName"))

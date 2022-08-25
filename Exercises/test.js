@@ -8,56 +8,41 @@ const people = [
     { firstName: 'Ava', lastName: 'Pena', DOB: '11/02/1986', department: 'Development', salary: '38000' },
     { firstName: 'Gabriella', lastName: 'Steward', DOB: '08/26/1994', department: 'Marketing', salary: '46000' },
     { firstName: 'Charles', lastName: 'Campbell', DOB: '09/04/1977', department: 'Sales', salary: '42000' },
-    { firstName: 'Tiffany', lastName: 'Lambert', DOB: '05/11/1990', department: 'Development', salary: '34000' },
-    { firstName: 'Antonio', lastName: 'Gonzalez', DOB: '03/24/1985', department: 'Office Management', salary: '49000' },
-    { firstName: 'Aaron', lastName: 'Garrett', DOB: '09/04/1985', department: 'Development', salary: '39000' }
+    { firstName: 'Tiffany', lastName: 'Lambert', DOB: '05/11/1992', department: 'Development', salary: '34000' },
+    { firstName: 'Antonio', lastName: 'Gonzalez', DOB: '08/25/1992', department: 'Office Management', salary: '49000' },
+    { firstName: 'Aaron', lastName: 'Garrett', DOB: '08/09/1992', department: 'Development', salary: '39000' }
 ]
 
-
-// AVERAGE OF INCOME
-// let averageIncome = (person, key) => {
-//     let sum = 0
-//     for (let individual of person) {
-//         sum = sum + parseInt(individual[key])
-//     }
-//     let media = sum / person.length
-//     console.log(media)
-// }
-// averageIncome(people, "salary")
-
-
-// PEOPLE OLDER THAN 30
-// Current Date
 let dateNow = new Date()
 let yearNow = dateNow.getFullYear()
 let monthNow = dateNow.getMonth() + 1
 let dayNow = dateNow.getDate()
 
-let peopleAge = (person, name) => {
-    for (let individual in person) {
-        // year = parseInt(individual[dateBirth].slice(-4))
-        // month = parseInt(individual[dateBirth].slice(0, 2))
-        // day = parseInt(individual[dateBirth].slice(-7, -5))
-        return individual
+const rankingArray = []
+const ranking = {}
+let makeArrayAge = (person, name, dateOfBirth) => {
+    for (let i = 0; i < person.length; i++) {
+        let yearBirth = parseInt(person[i][dateOfBirth].slice(-4))
+        let monthBirth = parseInt(person[i][dateOfBirth].slice(0, 2))
+        let dayBirth = parseInt(person[i][dateOfBirth].slice(-7, -5))
+        rankingArray.push([])
+        rankingArray[i][0] = person[i][name]
+        rankingArray[i][1] = yearBirth
+        rankingArray[i][2] = monthBirth
+        rankingArray[i][3] = dayBirth
     }
+    return rankingArray
 }
-//         if (Math.abs(year - yearNow) === 30) {
-//             if (month - monthNow === 0 && day - dayNow <= 0) {
-//                 over30.push(individual[name])
-//             }
-//             else if(month - monthNow <0){
-//                 over30.push(name)
-//             }
-//         }
-//         else if (Math.abs(year - yearNow) > 30) {
-//             over30.push(individual[name])
-//         }
-//         return over30;
-//     }
-// }
-
-
-console.log(peopleAge(people))
-
-
+console.log(makeArrayAge(people, "firstName", "DOB"))
+console.log(rankingArray.length)
+const crescentArrayAge = []
+let rankingArrayAge = (array) => {
+    for (let i = 0; i < array.length; i++){
+        for (x = 1; x < array.length - 1; x++){
+            console.log(array[i][1], array[x][1])
+            // if (array[i][1] < array[x][1])
+            }
+        }
+}
+rankingArrayAge(rankingArrayAge(rankingArray))
 

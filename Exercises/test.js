@@ -18,31 +18,29 @@ let yearNow = dateNow.getFullYear()
 let monthNow = dateNow.getMonth() + 1
 let dayNow = dateNow.getDate()
 
-const rankingArray = []
-const ranking = {}
-let makeArrayAge = (person, name, dateOfBirth) => {
-    for (let i = 0; i < person.length; i++) {
-        let yearBirth = parseInt(person[i][dateOfBirth].slice(-4))
-        let monthBirth = parseInt(person[i][dateOfBirth].slice(0, 2))
-        let dayBirth = parseInt(person[i][dateOfBirth].slice(-7, -5))
-        rankingArray.push([])
-        rankingArray[i][0] = person[i][name]
-        rankingArray[i][1] = yearBirth
-        rankingArray[i][2] = monthBirth
-        rankingArray[i][3] = dayBirth
-    }
-    return rankingArray
-}
-console.log(makeArrayAge(people, "firstName", "DOB"))
-console.log(rankingArray.length)
-const crescentArrayAge = []
-let rankingArrayAge = (array) => {
-    for (let i = 0; i < array.length; i++){
-        for (x = 1; x < array.length - 1; x++){
-            console.log(array[i][1], array[x][1])
-            // if (array[i][1] < array[x][1])
-            }
-        }
-}
-rankingArrayAge(rankingArrayAge(rankingArray))
 
+    // let yearBirth = parseInt(person[i][dateOfBirth].slice(-4))
+    // let monthBirth = parseInt(person[i][dateOfBirth].slice(0, 2))
+    // let dayBirth = parseInt(person[i][dateOfBirth].slice(-7, -5))
+
+const ranking = {}
+let makeDictAge = (person, name, dateOfBirth) => {
+    for (let i = 0; i < person.length; i++) {
+        ranking[person[i][name]] = person[i][dateOfBirth]
+    }
+    return ranking
+}
+makeDictAge(people, "firstName", "DOB")
+
+const rankingValues = Object.values(ranking)
+const rankingKeys = Object.keys(ranking)
+console.log(rankingValues)
+// console.log((Math.min(rankingValues)))
+
+// let rankingDictAge = (values) =>{
+//     while (min(values))
+//     for (let i = 0; i < values.length; i++){
+//         if (value.slice(-4) < )
+//     }
+// }
+// rankingDictAge(rankingValues)

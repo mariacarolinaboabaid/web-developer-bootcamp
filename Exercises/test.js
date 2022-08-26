@@ -13,34 +13,27 @@ const people = [
     { firstName: 'Aaron', lastName: 'Garrett', DOB: '08/09/1992', department: 'Development', salary: '39000' }
 ]
 
-let dateNow = new Date()
-let yearNow = dateNow.getFullYear()
-let monthNow = dateNow.getMonth() + 1
-let dayNow = dateNow.getDate()
-
-
-    // let yearBirth = parseInt(person[i][dateOfBirth].slice(-4))
-    // let monthBirth = parseInt(person[i][dateOfBirth].slice(0, 2))
-    // let dayBirth = parseInt(person[i][dateOfBirth].slice(-7, -5))
-
 const ranking = {}
 let makeDictAge = (person, name, dateOfBirth) => {
     for (let i = 0; i < person.length; i++) {
-        ranking[person[i][name]] = person[i][dateOfBirth]
+        ranking[person[i][name]] = parseInt(person[i][dateOfBirth].slice(-7, -5) + person[i][dateOfBirth].slice(0, 2) +  person[i][dateOfBirth].slice(-4))
     }
     return ranking
 }
-makeDictAge(people, "firstName", "DOB")
+console.log(makeDictAge(people, "firstName", "DOB"))
 
-const rankingValues = Object.values(ranking)
-const rankingKeys = Object.keys(ranking)
-console.log(rankingValues)
-// console.log((Math.min(rankingValues)))
+let values = Object.values(ranking)
+let keys = Object.keys(ranking)
+console.log(typeof Math.min(values))
 
-// let rankingDictAge = (values) =>{
-//     while (min(values))
-//     for (let i = 0; i < values.length; i++){
-//         if (value.slice(-4) < )
-//     }
-// }
-// rankingDictAge(rankingValues)
+let rankingValues = (arrayValues) => {
+    const crescentValues = []
+    for (let value of arrayValues){
+        console.log(value)
+        let minValue = Math.min(...arrayValues)
+        console.log(value, minValue)
+        crescentValues.push(minValue)
+    }
+    return crescentValues
+}
+console.log(rankingValues(values))

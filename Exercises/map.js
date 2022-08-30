@@ -13,27 +13,7 @@ const people = [
     { firstName: 'Aaron', lastName: 'Garrett', DOB: '08/09/1992', department: 'Development', salary: '39000' }
 ]
 
-const ranking = {}
-let makeDictAge = (person, name, dateOfBirth) => {
-    for (let i = 0; i < person.length; i++) {
-        ranking[person[i][name]] = parseInt(person[i][dateOfBirth].slice(-7, -5) + person[i][dateOfBirth].slice(0, 2) +  person[i][dateOfBirth].slice(-4))
-    }
-    return ranking
-}
-console.log(makeDictAge(people, "firstName", "DOB"))
-
-let values = Object.values(ranking)
-let keys = Object.keys(ranking)
-console.log(typeof Math.min(values))
-
-let rankingValues = (arrayValues) => {
-    const crescentValues = []
-    for (let value of arrayValues){
-        console.log(value)
-        let minValue = Math.min(...arrayValues)
-        console.log(value, minValue)
-        crescentValues.push(minValue)
-    }
-    return crescentValues
-}
-console.log(rankingValues(values))
+const fullName = people.map(item =>{
+   return item["firstName"] + " " + item["lastName"]
+})
+console.log(fullName)

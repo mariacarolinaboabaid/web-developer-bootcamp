@@ -20,7 +20,7 @@ let averageIncome = (person, key) => {
         sum = sum + parseInt(individual[key])
     }
     let media = sum / person.length
-    console.log(media)
+    console.log(`The average of the incomes is: ${media}`)
 }
 averageIncome(people, "salary")
 
@@ -38,16 +38,16 @@ let checkingAge = (person, name, dateOfBirth) => {
         let month = parseInt(individual[dateOfBirth].slice(0, 2))
         let day = parseInt(individual[dateOfBirth].slice(-7, -5))
         if (Math.abs(year - yearNow) === 30 && month - monthNow === 0 && day - dayNow <= 0) {
-            over30Age[over30Age.length] = individual[name]
+            over30Age[over30Age.length] = " " + individual[name]
         }
         else if (Math.abs(year - yearNow) === 30 && month - monthNow < 0) {
-            over30Age[over30Age.length] = individual[name]
+            over30Age[over30Age.length] = " " + individual[name]
         }
         else if (Math.abs(year - yearNow) > 30){
-            over30Age[over30Age.length] = individual[name]
+            over30Age[over30Age.length] = " " + individual[name]
         }
     }
-    console.log(over30Age)
+    console.log(`The employees that have more than 30 years are:${over30Age}`)
 }
 checkingAge(people, "firstName", "DOB")
 
@@ -56,19 +56,34 @@ const fullNameArray = []
 let fullName = (person, firstName, lastName) => {
     for (let individual of person) {
         var allName = individual[firstName].concat(" ", individual[lastName])
-        fullNameArray[fullNameArray.length] = allName
+        fullNameArray[fullNameArray.length] = " " + allName 
     }
-    console.log(fullNameArray)
+    console.log(`Full name of the employes:${fullNameArray} `)
 }
 fullName(people, "firstName", "lastName")
 
-// THE YOUNGEST TO THE OLDEST
-let rankingAge = (person, name, dateOfBirth) => {
-    for (let individual of person) {
-        let yearBirth = parseInt(individual[dateOfBirth].slice(-4))
-        let monthBirth = parseInt(individual[dateOfBirth].slice(0, 2))
-        let dayBirth = parseInt(individual[dateOfBirth].slice(-7, -5))
-        let yearAge = yearNow - yearBirth
-        console.log(yearAge)
+// HOW MANY PEOPLE WORKING IN EACH DEPARTAMENT:
+let dev = 0
+let mkt = 0
+let sales = 0 
+let ofMng = 0
+let makeDictAge = (person, areaWork) => {
+    for (let i = 0; i < person.length; i++) {
+        if (person[i][areaWork] === "Marketing"){
+        mkt += 1
+        } else if (person[i][areaWork] === "Development"){
+            dev += 1
+        }
+        else if (person[i][areaWork] === "Sales"){
+            sales += 1
+        } else if (person[i][areaWork] === "Office Management"){
+            ofMng += 1
+        }
     }
+    console.log(`Numbers of employees for each departament: 
+a) Development: ${dev}
+b) Marketing: ${mkt}
+c) Sales: ${sales}
+d) Office Management: ${ofMng}`)
 }
+makeDictAge(people, "department")

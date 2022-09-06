@@ -3,12 +3,11 @@ const inputTvShow = document.getElementById("userTvShow")
 const imgContainer = document.getElementById("container")
 
 // REQUEST FUNCTION
-searchForm.addEventListener("submit", async function (event) {
+searchForm.addEventListener("submit", function (event) {
     event.preventDefault()
     removeAllChild(imgContainer)
-    const nameTvShow = inputTvShow.value
-    const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${nameTvShow}`)
-    displayImgShows(res)
+    setTimeout(findingImg(), 2000)
+    displayImgShows(findingImg)
     searchForm.reset()
 })
 
@@ -22,6 +21,15 @@ const displayImgShows = (resultShows) => {
             imgContainer.append(imgShow)
         }
     }
+}
+const findingImg = async () => {
+    try {
+        const nameTvShow = inputTvShow.value
+        const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${nameTvShow}`)
+        return res
+    } catch {
+        console.log("Error")
+}
 }
 
 // REMOVING IMAGES FOR A NEW SUBMIT FUNCTION

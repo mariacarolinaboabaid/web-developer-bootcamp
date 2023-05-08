@@ -7,16 +7,16 @@ button.addEventListener("click", function (event) {
     const newP = document.createElement("p")
     newP.innerText = "You clicked the button!"
     div.append(newP)
-    event.stopPropagation()
+     event.stopPropagation()
 })
-section.addEventListener("click", function () {
-    const newP = document.createElement("p")
-    newP.innerText = "You clicked the section!"
-    div.append(newP)
-}) 
 prg.addEventListener("click", function (event) {
     const newP = document.createElement("p")
     newP.innerText = "You clicked the paragraph!"
     div.append(newP)
-    event.stopPropagation()
+     event.stopPropagation()
 })
+section.addEventListener("click", function () {
+     const newP = document.createElement("p")
+     newP.innerText = "You clicked the section!"     
+     div.append(newP)
+ }) 
